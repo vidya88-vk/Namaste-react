@@ -1,0 +1,90 @@
+Basic Html code
+-create index.html file
+-Vs code uses emmet means generate some code for you
+-if you write html:5 and hit enter it give you html template 
+
+Javascript Hello Word program
+--use <script></script> tag.
+--document.createElement() -- The createElement() method creates an element node.
+--innerHTML -- The innerHTML property returns the HTML content (inner HTML) of an element.
+--appendChild() -- It is a method to insert a element or object at the last child of the element.
+
+
+React Js Hellow World Program:-
+React is a Javascript Library use to build user interface.
+1.Adding React into our project via CDN React
+--CDN React -- Content Delivery Network  -- use to speed application ,Improving website load times,reducing bandwidth cost.
+Basically CDN is a place where react library is hosted.
+
+--crossorigin -- The crossorigin attribute sets the mode of the request to an HTTP CORS Request.
+
+Web pages often make requests to load resources on other servers. Here is where CORS comes in.
+A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+
+CORS is used to manage cross-origin requests.
+
+CORS stands for Cross-Origin Resource Sharing, and is a mechanism that allows resources on a web page to be requested from another domain outside their own domain. It defines a way of how a browser and server can interact to determine whether it is safe to allow the cross-origin request. CORS allows servers to specify who can access the assets on the server, among many other things.
+
+--react.development.js  --File contains core functionality of react.
+--react-dom.development.js -- Used to do dom operations.
+--Dom(Document Object Model) -- ReactDOM is a package in React that provides DOM-specific methods that can be used at the top level of a web app to enable an efficient way of managing DOM elements of the web page. 
+
+--Important functions provided by ReactDOM
+render(): This is one of the most important methods of ReactDOM. The purpose of the function is to display the specified HTML code inside the specified HTML element. 
+
+
+React Basic Hello World Code
+-- Create h1 tag in react -- use React.createElement() -- to create an element tag(html tag)--It takes 3 parameter 
+syntax :- const heading = React.createElement("h1",{},"Hello world from React");
+  1. Html tag ex:- h1,p etc.
+  2. Object in curly braces {} -- object is a place where you give attribute to your tag.like id,class etc.,
+  3. Text you want to enter in this tag
+
+--Create root in react which have all the DOM operations. so it uses ReactDom.creatRoot() method.
+
+
+Adding Css To React Code
+-- creating index.css file -- add css according to class and id 
+
+React props:- React components use props to communicate with each other. Every parent component can pass some information to its child components by giving them props. Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, and functions.React Props containes childern and id.
+
+
+To create html nested sibling structure like below using react :- 
+/** nested html structure
+<div id="parent">
+    <div id="child">
+        <h1>I am h1 tag!!</h1>
+        <h2>I am an h2 tag</h2>
+    </div>
+</div> 
+Note:- ReactElement() -- Object -- Html Understand =>(Browser)
+*/
+
+React for above:-
+// create above html nested structure in react
+const parent = React.createElement(
+  "div",
+  { id: "parent" },
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "I am h1 tag"),
+    React.createElement("h2", {}, "I am h2 tag"),
+  ])
+);
+console.log(parent);
+
+Here for creating sibling structure of same parent class we use array for this Ex:-[
+    React.createElement("h1", {}, "I am h1 tag"),
+    React.createElement("h1", {}, "I am h2 tag"),
+  ]
+
+  -- if we add more html structure in react the react code look like very tidy(not arrange properly,diff to understand).That's why we use JSX.
+
+
+  Towards ending episode 1.some imp points.
+  1. Order of files is always in sequence. -- 1.react.development.js 2.react-dom.development.js 3. App.js
+  2.crossorigin  -- If you serve React from a CDN, we recommend to keep the crossorigin attribute set
+  3.what is diff between react.development.js and react.production.js files via CDN.
+  Ans:- Development build runs the code as a Development environment and it is very slow.(Developer Friendly)
+        Production build is for running the code on client browsers with more performance improvements.(Not DF)
+4.what is diff between library and framework?
+ans:- 
