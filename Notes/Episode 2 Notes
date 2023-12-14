@@ -1,0 +1,64 @@
+Create repository in github steps:-
+1.create new repository in github accound.
+2.Go to your project folder and do git init -- git init make your project as git project.
+3.create new branch -- git branch -M master.
+4.add all files to git -- git add .
+5. commit the files -- git commit -m "episode 1"
+6.add origin before push because git doesn't where is master branch -- git remote add origin <repository url>
+7.push code to master --  git push origin master 
+
+
+Episode 2 --Igniting our APP -- Make fast production ready app
+1.NPM -- Pacakage Manager --stnadard repository to manage pacakage.all pacakages comes from npm.Npm manages pacakages but it does not stand for (Node Pacakage Manger)
+
+2.npm init --creating package.json file.
+1.pacakage.json -- configuration of npm.manage dependencies or pacakages.Keep track of version being install.Developers manually edit this file to add or remove dependencies, modify scripts, update version ranges, or make other configuration changes.
+
+2.pacakage-lock.json -- Keep track of exact version. It is generally not meant to be manually edited, as it is managed automatically by npm. Manual changes to this file can lead to inconsistencies or conflicts in dependency resolution.
+
+Installing dependencies or pacakage
+Imp pacakage is bundler -- Bundler is bundle your app or pacakages your app properly so you can shift it to production. webpack,rollup,vit,bebble,parcel this are bundler.
+
+Here we use Parcel in this project.
+install pracel -- npm install <dependency_name>  -- npm install -D parcel.what is -D? -D means dev dependency
+parcel created below things for you:-
+       -- Dev build 
+        --local server
+        --Automatically refreshing your page i.e. HMR = Hote Module Replacement if you change something file it refresh automatically means its doing HMR.
+        --parcel uses File watching algorithm-- written in c++.
+        --Caching -- Faster build(.parcel-cache)
+        --Image Optimazation -- most expensive thing in your browser is image loading.
+        --Mininfication
+        --Bundling
+        --Compress -- file size become reduced.
+        --Consistent hashing
+        --code splitting 
+        --Differntial bundling -- supports to older browsers.
+        -- Good Error handling
+       -- parcel also host app in https.
+       --Tree shaking--remove unused code.
+       --parcel.org--parcel documentation.
+Prod build using parcel:-
+npx parcel build index.html -- after firing this you get an error like build failed ,error in package.json file .So we need to remove "main":pacakage.json from there.
+
+
+--There are two type of dependencies in our app
+  1.dev dependency -- require for development phase
+  2.Normal dependency -- use in production 
+
+
+Node Modules:-node mules contains all the code that are fetch from npm which are needed for pacakages.It is very heavy.kind of database .all packages exist there.Collection of dependencies.
+
+Transitive dependencies:- if our project has pacakage.json file.it has parcel devdepnedncies.but that parcel again has denpency on other is call transitive dependencies.
+
+Note:- every dependency has its own pacakage.json.
+--Doesn't push node_mudules to git hub--we cannot push it bcoz we can recreate node_mule using command npm install.
+-- we can push pcakage.json and pacakage-lock.json into git hub.
+
+ignite our app using parcel -- npx means executing a pacakage --npx parcel index.html -- it provide server.
+
+NOTE:- CDN Links are not a good way to include react or react-dom in our project.becoz react already present in our node module.so no need to call it again.
+
+Install React and React Dom -- npm install react & npm install react-dom
+USe React in our code for that we have to import it in our code.
+import React from "react";  -- useing this we import it.here "react" gets reference from React which is available in node_modules.
