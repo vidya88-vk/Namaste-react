@@ -1,0 +1,104 @@
+**To run our application fire below command:-
+npx parcel index.html -- It create a development build. index.html is source file.parcel is pacakage .using npx we fire this parcel pacakage.
+
+**How to create npm Scripts:-
+1.creating script in pacakage.json under scripts section.creating script for development build.to start our project in dev mode we use script.
+2.create start script for development.
+3.create build script for production.
+
+** How to run above script:-
+npm run start -- development -- also write npm start
+npm run build --  production --  not work npm build in this.
+
+** Laying Foundation from start:- 
+**React Element:- Kind of DOM Element(h1,p,text,title tag).react element at end of day is object.when you render react element then it becomes html element.(Note good way to to code using React Element).
+
+**JSX :- 
+--JSX stands for JavaScript XML.
+--JSX is a javascript syntax to create react element.
+--Easy to use. 
+--JSX is not HTML inside javascript.
+--JSX is html like syntax.
+--JSX is XML like .
+--JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.
+--JSX understand only ES6.
+--JSX (transplied code before it reaches to Js engine) => transpiled done by parcel => parcel doing this from Babel(Babel is pacakage installed by parcel)
+--Babel javascript compiler.it converts JSX code into react code.
+--Parcel installed babel.
+--Babel convert JSX code into into react code. 
+--Babel open source javascript compiler.
+
+**How JSX works:-
+--Babel convert JSX Code converted into react element(React.createElement).
+--React element converted into js object.
+--Object render HTML Element and show it to browser.
+--JSX syantx --<h1 id="heading" className="head">Namsate JSX Code</h1>
+--JSX Attributes Follows Camel Case like tabIndex,className.
+--Single line JSX means your jsx code in one line like <h1 id="heading" className="head">Namsate JSX Code</h1>
+--Multiline JSX means code break down into small piece and we want to wrapping it into () round braket.
+--Ex:- const jsxHeading = (<h1>Namsate
+  React Using
+  JSX
+</h1>); multiline jsx.
+
+**JSX Advantages:-
+
+**ES6:- ECMAScript 6
+    --Arrow function
+
+**React Component:-
+--Everything is component in react.
+--Two types of component in react.
+
+1.Class Based Components:-
+    --Old way of writing code.
+    --No one uses class components now.
+    --uses javascript classes.
+
+
+2.Functional Components:-
+    --New way of writing code.
+    --Everyone uses class components.
+    --uses normal javascript functions.
+    --Always remeber functional component name of first letter written in capital ex:-HeadingComponent,DemoCompoent like this.
+    --functional component is javascript function which return some piece of JSX code is called.
+    --Syntax:- const <component_name> = () => {}
+
+    --Short hand syntax:- const HeadingComponent = () => {return true};
+
+**How to render functional components:- 
+    --To render functional compoenent inside root use synatx :- <ComponentName/>
+    -- ex;- root.render(<HeadingComponent/>)
+
+**Component composition:-
+ --calling one component inside another component is called component composition.
+ --Synatx:- Just call another component in where you want to call using  this syntax<TitleComponent/>
+
+** Arrow function:-arrow function used in functional component is not manadotry.you can use normal function also.below is the synatx:-
+  const HeadingComponent = function(){
+    return(
+        <div id="container">
+        <h1 className="hello">
+        Normal functional component synatx
+        </h1>
+        </div>
+    )
+  }
+
+  --Arrow function is industry standard.that's why we use it.good practice it is.
+
+  **Superpower of JSX:-
+    -- you can write any javascript code inside {} this curly braces in jsx code.
+    -- synatx:- const HeadingComponent = () => (
+  <div id="container">
+    {/* call Title component here */} 
+    <Title></Title> --this one & below is same
+    <Title/>
+    //written javascript code 
+    {100+200}
+    <h1 className="heading">Namaste react functional component.</h1>
+  </div>
+);
+
+-- calling react element in component uses {} curly braces inside jsx code.becoz react element is javascript object.
+-- you can also call function in curly braces {}

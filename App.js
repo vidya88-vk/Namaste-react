@@ -1,37 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/** nested html structure
-<div id="parent">
-    <div id="child">
-        <h1>I am h1 tag!!</h1>
-        <h2>I am an h2 tag</h2>
-    </div>
-</div> 
-Note:- ReactElement() -- Object -- Html Understand =>(Browser)
-*/
+//React Element =>object->reneder(Html)=>Clumsy code=>to avoid this JSX use
 
-// create above html nested structure in react
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "This is namaste React!!! "),
-    React.createElement("h2", {}, "I am h2 tag"),
-  ])
-);
-console.log(parent);
+//JSX == Javascript + xml
+//Creating h1 tag using JSX.
 
-// creating h1 tag
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Hello world from React!!"
+const Title = () => (
+  <h1 className="head" tabIndex={5}>
+    Namsate React Using JSX
+  </h1>
 );
-//console.log(heading); //return object of heading const.
-// Creating root for react
+
+const num = 1000;
+//React Functional Component
+const HeadingComponent = () => (
+  <div id="container">
+    {/* call Title component here */}
+    <Title />
+    {/* writing javascript variable num code in jsx inside {} braces */}
+    {100 + 100}
+    <h1 className="heading">Namaste react functional component.</h1>
+  </div>
+);
+
+//short hand functional component syntax
+// const HeadingComponent2 = () => (
+//   <h1 id="head">Namaste react functional component.</h1>
+// );
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// Rendering heading inside Root
-// root.render(heading);
-root.render(parent);
+//render functional component
+root.render(<HeadingComponent />);
