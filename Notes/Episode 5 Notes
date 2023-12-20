@@ -1,0 +1,80 @@
+**Best Industry Stnadarads:-
+ --Create new file for every component.
+ -- Folder Structure:-
+    --Keep all files in src folder--All  Source Code Files present.
+    --Keep app.js in src folder.
+    --Create separate file for separate component.
+    --Create Components folder to keep -- all component files in it.
+    --Name of component and component file is same.
+    --.js ,.jsx, .tsx(typescript) this extension used.
+    --Export ComponenetName syntax:- export default <ComponenetName>. export written within the component file.
+    --Import the component where you want that.
+    --Firstly export the component and then import.
+    --Never keep harcoded data in your files.
+
+** 2 Types of Export and Import:-
+default export/Import:-
+    -- In single file use default export.
+    -- you cannot export twice in single file.
+    --syntax:- export default <comp_name>
+    --Import syntax:- import comp_name from "path"
+
+Named Export:-
+   --If you want to export multiple component in one file then used named export.
+   --applying export keyword in front of const you can acheive this.
+
+Import Named export:-
+ --When you have to import named export used below syntax:-
+ -- import {LOGO_URL} from "../../utils/constants";
+
+ 
+
+ **JavaScript Event Handlers
+Event handlers can be used to handle and verify user input, user actions, and browser actions:
+
+Things that should be done every time a page loads
+Things that should be done when the page is closed
+Action that should be performed when a user clicks a button
+Content that should be verified when a user inputs data
+   
+    
+** REACT HOOKS: -
+        --React Hook means normal js function which is given to us by react.
+        --Superpowerful variable.
+        --react hook function has some logic inside it.
+        --Written by face developers.
+        --normal js  utility functions.
+        --There are multiple react hooks.
+
+** useState():-
+    --Used to generate superpowerful state variable in react.
+    --Import use state from react import like named import.
+    -- import { useState } from "react"
+    --use to create state variable.manage the state of variable.
+    --How to create useState variable.
+    --Syntax:- 
+        const [listOfRestaurants] = useState();
+    --when you call the usestate it gives a variable inside Array.
+    --passing default values empty array, null, object in use state.
+    --useState([]) --empty Array
+    --useState(null) -- null Value.
+    -- useState([{}]) --passing array of object
+    
+--To modify listOfRestaurants using useState give setListOfRestaurants like below.
+-- const [listOfRestaurants, setListOfRestaurants] = useState([{}])
+        
+--Suprpowerful variable update the UI layer in sync with data layer.
+    
+--Whenever state variable is update react rerender its componenet.
+
+** useEffect(): -
+
+
+** Virtual DOM: - React Object.
+
+--diff Algorithm--find diff between old virtual dom and new virtual dom.
+
+** Reconcilitation Algorithm or React Fiber Algorithm: -
+    --whenever something change on react reconcilation happen.
+    --Find the diff between old nd new object nd then update the virtual dom.
+    --React Fiber means way to updating a virtual DOMException.

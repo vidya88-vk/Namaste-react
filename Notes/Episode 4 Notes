@@ -1,0 +1,45 @@
+**Build a Real world application
+1.Food Ordering App using React :-
+--Steps:-
+    -- UI Design/wireframe.
+    --Planning a component
+
+--If you repeate some code or component.
+ --here restaurant card we can use it many time. so it becomes reusable component.
+ -- so create restaurant card as component separately.
+
+ **Props:- means properties means you have to pass something to the component.
+ -- If you want to pass data dynamically to compoent we use props.
+ --props are just normal argument to a function.
+ Ex:- <RestaurantCard resName="meghana Fooda" cuisine="biryani"/> this resName and cuisine are the props which are passing data to RestaurantCard compoennt.
+ --props is end of end object.
+
+ **Way of passing data to component:-
+ --From backend we get json type data.sometime it is complicated.
+
+ **Json viewr --chrome extension-- to see json data **
+
+ **Config DrivenS UI:-
+    --UI is basically driven by config.
+    --Config means data==diff data
+
+**Array join():-
+  --The join() method returns an array as a string.
+  --The join() method does not change the original array.
+  --Any separator can be specified. The default is comma (,).
+  --Syntax:-array.join(separator)
+
+**Array map():-
+--map() creates a new array from calling a function for every array element.
+--map() does not execute the function for empty elements.
+--map() does not change the original array.
+Ex:-
+{resList.map((restaurant) => (
+    <RestaurantCard resData={resturant}/>
+))}
+
+**key :- 
+--Always user key
+--Always use unique key.
+--not good practice to use index as key.
+--if unique id is not present then as a last approach use index as key.
