@@ -1,0 +1,64 @@
+**Monolithic Architecture:-
+    --Traditional application developed in monolithic.
+    --All code beside in one place like api,dbms etc.,
+
+**Microservice Architecture:-
+    --Todays world uses microservice architecure.
+    --It has services for DB,SMS,Auth and UI services.
+    --All the service combine toghether and form a big application.
+    --Follows Single responsibility principle.
+    --no one interfare with each other.each have their own task.
+    --Here different tech stack for each services.
+
+**How these services are deployed:-
+--Namsate UI project is UI Microsevice written in react.
+--All services run on their specific port.
+--1234 -- UI service
+-- 5000 -- Backend sevice.
+--Aa the ende of day theses are map into some domain.like /api,/ui
+--Using diff call to url they communicate each other.
+
+
+
+**How to fecth data from API in react:-
+  --There are two ways can be followed to fetch data from API:-
+  1.as soon as our page load->make api call->when we get data render into UI.
+
+  2.as soon as page loads->render the UI->then make API call->when get data then rerender the data on apllication.
+
+  --In react using 2nd approach:- why?
+    --Better UX.
+
+**useEffectHook:- 
+--Just normal function
+--2 arguments :- 1.call back function(arrow function) 2. dependency array.
+--syntax:- useEffect(()=>{},[])
+--After your component render call back function of useeffect call.
+--fetch the data in useeffect.
+
+
+**fetch():- 
+--This function given by browser.This fetch will fecth data from API.
+--fetch return promise.
+--handle promise using async await
+
+**CORS Policy:-
+ -- Broswer block to fetch data from one origin to another is called CORS Policy.
+ --CORS Extension by pass CORS error.
+
+
+**Optional Chaining:-
+    The optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
+
+
+**Shimmer UI:-
+--when api loads to fetch data in that time apply shimmer ui.
+--Instead of giving loading .use shimmer ui
+
+
+**Why we need state variable:-
+    -- To refresh component we use useState.
+    --To make your component dynamic.
+
+
+**IMP NOTE:- whenever you change local state or use state  variable its rerender the component.

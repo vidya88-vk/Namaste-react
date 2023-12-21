@@ -8,6 +8,7 @@ const resObj = {
       avgRating: 4,
       costForTwo: 400,
       deliveryTime: 32,
+      img: " https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vt1mquaxmeugaf9dl5pp",
     },
     {
       type: "F",
@@ -16,6 +17,7 @@ const resObj = {
       avgRating: 4,
       costForTwo: 400,
       deliveryTime: 32,
+      img: "https://b.zmtcdn.com/data/pictures/chains/9/19167289/9361ee4d0e18519da526b87f81f067ae_o2_featured_v2.jpg",
     },
     {
       type: "F",
@@ -24,6 +26,7 @@ const resObj = {
       avgRating: 4,
       costForTwo: 400,
       deliveryTime: 32,
+      img: "https://b.zmtcdn.com/data/dish_photos/377/5bb1c750ff70deee81a911943cbc4377.jpg",
     },
     {
       type: "F",
@@ -32,6 +35,7 @@ const resObj = {
       avgRating: 4,
       costForTwo: 400,
       deliveryTime: 32,
+      img: "https://b.zmtcdn.com/data/dish_photos/f0e/4037369d6fdf1d88d2390d9b95c60f0e.jpg",
     },
     {
       type: "F",
@@ -40,6 +44,7 @@ const resObj = {
       avgRating: 4,
       costForTwo: 400,
       deliveryTime: 32,
+      img: "https://b.zmtcdn.com/data/dish_photos/f0e/4037369d6fdf1d88d2390d9b95c60f0e.jpg",
     },
     {
       type: "F",
@@ -48,6 +53,7 @@ const resObj = {
       avgRating: 4,
       costForTwo: 400,
       deliveryTime: 32,
+      img: "https://b.zmtcdn.com/data/pictures/1/19107721/d6a834a3ee8290f6ab3968062769c40a_o2_featured_v2.jpg",
     },
   ],
 };
