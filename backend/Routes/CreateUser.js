@@ -34,6 +34,7 @@ router.post("/createproduct", async (req, res) => {
       costForTwo: req.body.costForTwo,
       deliveryTime: req.body.deliveryTime,
       img: req.body.img,
+      menu: req.body.menu,
     });
 
     res.json({

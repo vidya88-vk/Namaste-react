@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resObj from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-
+import { Link } from "react-router-dom";
 const Body = () => {
   // Local State variable - Super powerful variable.
 
@@ -55,7 +55,6 @@ const Body = () => {
                 return res.name.includes(searchText);
               });
 
-              console.log(":hii", filterRestaurants);
               setFilteredRestaurant(filterRestaurants);
             }}
           >
@@ -81,7 +80,9 @@ const Body = () => {
         {/* RestaurantCard */}
         {/* array map function  */}
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} resData={restaurant} />
+          <Link key={restaurant.id} to={"/restaurants/" + restaurant.id}>
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

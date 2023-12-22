@@ -1,0 +1,43 @@
+**Hooks:- 
+**useEfttect:-
+--call back function is mandatory in useEffect.
+ when useEfftect call?
+  --if no dependency array used its called Every time when component render . 
+
+  --If dependency array is empty = []
+ =>useEffect called on only inital render and just one.
+
+ --If we put something in depedency array => useeefect is called every time when dependency array is updated.
+
+**useState:- 
+        -- never create state variable out of component.
+        -- try to call this hook on the top.
+        --becoz js is single threaded lang.
+        --never use useState inside if else,functions,for loop etc.,
+
+
+**Routing:-
+ -- React Router Dom library for routing.
+-- install reactrouterdom library.
+--Routing configuration :- createBrowserRouter gives you a path of object which holds the configuration.
+ --RouterProvider :- Providing routing configuration to app.
+
+ ** How to handle Errors:-
+ **useRouteError:-
+
+ **Childern Route :-
+
+ **Link:-
+  -- Navigate to other route.
+  --without loading the page it take us from one page to other page.
+ -- Superpower by react
+  -- named import
+
+  **React is Single Page application.
+
+  **Two types of Routing:-
+  1.Client side routing:- don't need network call
+  2.Server side routing:- make network call->page coming from server.
+
+
+**useParam Hook:- To know to dyanmic id

@@ -2,6 +2,21 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
+const menuSchema = mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, "Please enter a product name"],
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+});
+
 const ProductSchema = new Schema({
   name: {
     type: String,
@@ -27,6 +42,8 @@ const ProductSchema = new Schema({
     type: String,
     required: true,
   },
+  menu: [menuSchema],
 });
+
 
 module.exports = mongoose.model("product", ProductSchema);
