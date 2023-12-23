@@ -1,0 +1,39 @@
+**Class Based Components:-
+ --class based component --Normal js class.
+ --Syntax:-
+class UserClass extends React.Component{
+    render(){
+        return(<div></div>)
+    }
+    }
+
+--Class based has render () method which gives us jsx code.
+-- React.Component import from react library.
+-- to use props use:- constructor(props) {
+    super(props);
+    
+  }
+  --Super is used to mandatory while use props.
+  --To call props in input use:- this.props.<parameter name>
+   --When created class constructor is called and props is extracted.hence props use any where in code.
+
+--To create state variable:-
+    this.state = {
+      count: 1,
+    };
+
+To use it:-  <h1>Count={this.state.count}</h1>
+
+**Life cycle of class component:-
+--parent constructor->parent render
+--child constructor->child render
+order of calling
+ --constructor call 
+ --render() method
+  --componentDidMount() method
+
+
+  **Life Cycle has two phases:
+  1.Render phase:- -- component mounting,constructor calling,render method.
+  2.Commit phase:- componentDidMount(),work with DOM,componentDidUpdate()
+
