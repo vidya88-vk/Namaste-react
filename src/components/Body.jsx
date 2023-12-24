@@ -3,6 +3,8 @@ import resObj from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Body = () => {
   // Local State variable - Super powerful variable.
 
@@ -30,7 +32,12 @@ const Body = () => {
     setFilteredRestaurant(json);
   };
 
-  //conditional rendering--rendering on baisi of condition--using ternar operator
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return <h1>Looks Like you're offline..Please check your internet!!!</h1>;
+
+  //conditional rendering--rendering on bais of condition--using ternary operator
 
   return listOfRestaurants.length == 0 ? (
     <Shimmer />

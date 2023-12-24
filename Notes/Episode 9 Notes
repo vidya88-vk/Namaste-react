@@ -1,0 +1,24 @@
+**Optimizing  Code:-
+ -- Below aspects help to optimize code.
+ 
+**Single Responsibility Principle:- 
+  --Each component has single responsibility.
+ -- Modularity:- Break down code into small small modules.
+--This makes code testable and maintable.
+ --Component Reusability feature.
+
+**Custom Hook:- 
+ -- Hooks are like utility function.(Normal Function).
+ -- Creating custome view not mandatory bu good thing
+ --This make your code readable,maintainable,reusable.
+ --Syntax:-
+    const data = useRestaurantMenu();
+ -- Create separate file for separate hook.
+ --Always name custom hook with use keyword before it.
+
+
+ **Chunking:- split your application into smaller chunks or smaller part.
+ **Code Splitting:- split your code into small part
+ **Dynamic bundling:-
+ **Lazy Loading:- To make separate bundle for each component.lazy() is function provide by react.It takes call back function and in that the component path is provided.
+ **On demand Loading
