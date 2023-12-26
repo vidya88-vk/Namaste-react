@@ -43,17 +43,18 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="serach">
+      <div className="filter flex">
+        <div className="serach m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           ></input>
           <button
+            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
               //filter the resraunt card and update the UI
               //searchText
@@ -68,26 +69,28 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            //Filter Logic
+        <div className="serach m-3 p-3 flex items-center">
+          <button
+            className="px-2 py-2 bg-gray-100 rounded-lg"
+            onClick={() => {
+              //Filter Logic
 
-            const filteredList = listOfRestaurants.filter((res) => {
-              return res.avgRating > 4;
-            });
+              const filteredList = listOfRestaurants.filter((res) => {
+                return res.avgRating > 4;
+              });
 
-            setListOfRestaurants(filteredList);
-          }}
-        >
-          Top Rated Resto
-        </button>
+              setListOfRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
+        </div>
       </div>
-      <div className="rest-container">
+      <div className="flex flex-wrap">
         {/* RestaurantCard */}
         {/* array map function  */}
         {filteredRestaurant.map((restaurant) => (
-          <Link key={restaurant.id} to={"/restaurants/" + restaurant.id}>
+          <Link key={restaurant.id} to={"/restaurants/" + restaurant._id}>
             <RestaurantCard resData={restaurant} />
           </Link>
         ))}

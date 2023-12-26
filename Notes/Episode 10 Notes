@@ -1,0 +1,29 @@
+**How to apply css into react app:-
+**Ways:-
+1.External Css-index.css.
+
+2.sass/scss:- 
+ --Writing css with superpowers.
+ --Writing Advance css.
+
+
+3.Styled-Components:-
+ --To write css to our components.
+
+** material UI--React library  --prebuild css
+**Bootstrap -- React library --prebuild css
+**Chakra UI:-
+**Ant Design:- 2nd most popular library.
+
+**Tailwind CSS:-
+ --Building modern css without leave your html.
+ --It works with all frameworks.
+
+ **Installation:-
+  -- npm install -D tailwindcss postcss 
+  --postcss means transform your css with javascript.
+
+  --npx tailwindcss init -- created tailwind.config.js file
+   --postcssrc -- created configuration file for postcssrc.
+
+   **Tailwind Css:- Provide classname to apply css.

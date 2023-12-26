@@ -29,20 +29,20 @@ const RestaurantMenu = () => {
   if (resInfo === null) return <Shimmer />;
 
   return (
-    <div className="menu">
-      {resInfo.map((item, index) => (
-        <div key={index}>
-          <h1>{item.name}</h1>
-          <h2>{item.avgRating}</h2>
-          <h3>Menu</h3>
-          <ul>
-            {item.menu.map((menuItem, menuIndex) => (
-              <li key={menuIndex}>{menuItem.name}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+    <div className="px-4 py-2 bg-green-100 m-4 rounded-lg">
+      {/* {resInfo.map((item, index) => (
+        <div key={index}> */}
+      {/* <h1>{item.name}</h1>
+          <h2>{item.avgRating}</h2> */}
+      <h3>Menu</h3>
+      <ul>
+        {resInfo.menu.map((menuItem, menuIndex) => (
+          <li key={menuIndex}>{menuItem.name}</li>
+        ))}
+      </ul>
     </div>
+    //       ))}
+    //     </div>
   );
 };
 
