@@ -1,0 +1,61 @@
+**Higher Order Components:-
+  --IS a function that takes a component and return a component.
+  --Takes existing component as input enhance it and return a  new component.
+ --pure function:- It will not change the behaviour of component.
+
+
+**Controll and Uncontroll Component:-
+
+
+
+
+data insert structure:-
+  
+  "name": "Dominoz",
+  "cuisine": [
+    "Veg Pizza",
+    "Non-veg Pizza"
+  ],
+  "avgRating": "4.0",
+  "costForTwo": "400",
+  "deliveryTime": "25 minutes",
+  "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/clcpnrfs8dz1xcrlbhwr",
+  "promoted":true,
+  "menu": [
+    {
+      "name": "Pasta",
+      "price": 100,
+      "image": "https://www.dominos.co.in/theme2/front/images/menu-images/pasta_new.webp"
+    },
+    {
+      "name": "pastry",
+      "price": 30,
+      "image": "https://www.doughandcream.com/wp-content/uploads/2023/02/Ferraro-Rocher-Pastry-1.jpg"
+    }
+  ]
+
+
+{
+  "name": "McDonald's",
+  "cuisine": [
+    "Burgers",
+    "Beverages"
+  ],
+  "avgRating": "4.4",
+  "costForTwo": "300",
+  "deliveryTime": "17 minutes",
+  "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/bb7ae131544c7d37e10fc5faf76f09d6",
+  "promoted":false,
+  "menu": [
+    {
+      "name": "McAloo Tikki",
+      "price": 217,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/ea7ba594c7d77cb752de9a730fbcb3bf"
+    },
+    {
+      "name": "Fries",
+      "price": 100,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/22fa7889d5fa91c14f52a1ecc09770c3"
+    }
+  ]
+}

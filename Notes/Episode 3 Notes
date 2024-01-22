@@ -74,7 +74,7 @@ npm run build --  production --  not work npm build in this.
  --calling one component inside another component is called component composition.
  --Synatx:- Just call another component in where you want to call using  this syntax<TitleComponent/>
 
-** Arrow function:-arrow function used in functional component is not manadotry.you can use normal function also.below is the synatx:-
+** Arrow function:-arrow function used in functional component is not mandotry.you can use normal function also.below is the synatx:-
   const HeadingComponent = function(){
     return(
         <div id="container">

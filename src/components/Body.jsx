@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resObj from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
@@ -13,6 +13,8 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   //useEffect--Take 2 arguments.
   useEffect(() => {
@@ -91,7 +93,13 @@ const Body = () => {
         {/* array map function  */}
         {filteredRestaurant.map((restaurant) => (
           <Link key={restaurant.id} to={"/restaurants/" + restaurant._id}>
-            <RestaurantCard resData={restaurant} />
+            {/* if restaurant is promoted add a promoted label to it */}
+
+            {restaurant.promoted ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

@@ -39,7 +39,7 @@ Ex:-
 ))}
 
 **key :- 
---Always user key
+--Always use key
 --Always use unique key.
 --not good practice to use index as key.
 --if unique id is not present then as a last approach use index as key.

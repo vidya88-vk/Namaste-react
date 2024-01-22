@@ -38,6 +38,10 @@ const ProductSchema = new Schema({
     type: String,
     required: true,
   },
+  promoted: {
+    type: String,
+    required: true,
+  },
   img: {
     type: String,
     required: true,

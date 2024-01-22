@@ -35,6 +35,7 @@ router.post("/createproduct", async (req, res) => {
       deliveryTime: req.body.deliveryTime,
       img: req.body.img,
       menu: req.body.menu,
+      promoted: req.body.promoted,
     });
 
     res.json({
